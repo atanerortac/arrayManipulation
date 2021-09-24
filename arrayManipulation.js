@@ -26,8 +26,8 @@ function readLine() {
 function arrayManipulation(n, queries) {
   const arr = [];
   for (const [start, end, value] of queries) {
-    arr[start] = (arr[start] || 0) + value;
-    arr[end + 1] = (arr[end + 1] || 0) - value;
+    arr[start - 1] = (arr[start - 1] || 0) + value;
+    arr[end] = (arr[end] || 0) - value;
   }
 
   let last = 0;
